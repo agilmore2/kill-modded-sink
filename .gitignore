@@ -1,0 +1,17 @@
+*.log*
+*.zip
+*.jar
+*.points
+*.lang
+*.pak
+*~
+assets
+compendiumunlocks
+crash-reports
+CustomDISkins
+customnpcs
+saves
+stats
+screenshots
+world
+
