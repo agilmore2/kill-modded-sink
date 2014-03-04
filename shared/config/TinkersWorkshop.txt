@@ -126,7 +126,7 @@ block {
     B:"Enable mod slime tools"=true
     B:"Enable mod stone tools"=true
     B:"Enable mod wooden tools"=true
-    B:"Keep hunger on death"=true
+    B:"Keep hunger on death"=false
     B:"Keep levels on death"=true
     B:"Modifiers increase Mining Level"=true
     B:"Remove Vanilla Tool Recipes"=false
@@ -160,7 +160,7 @@ dimblacklist {
 
 "environment checks" {
     # Change env check warnings to reflect that this is a modpack.
-    B:IsModpack=false
+    B:IsModpack=true
 }
 
 
