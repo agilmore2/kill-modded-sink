@@ -1,10 +1,13 @@
 # Makefile for Vanilla Killed the Modded Sink
 
 VERSION=1.2
-TEMPCLNT := $(shell mktemp -d client-buildXXXX)
-TEMPSERV := $(shell mktemp -d server-buildXXXX)
+TEMPCLNT := $(shell mktemp -u client-buildXXXX)
+TEMPSERV := $(shell mktemp -u server-buildXXXX)
+
+all: client-zip server-zip cleanbuild
 
 client: 
+	mkdir $(TEMPCLNT) && \
 	cd $(TEMPCLNT) && \
 	cp -r ../shared/config . && \
 	cp -r ../shared-pkgs/mods . && \
@@ -12,6 +15,7 @@ client:
 	cp -r ../client-only/* .
 
 server:
+	mkdir $(TEMPSERV) && \
 	cd $(TEMPSERV) && \
 	cp -r ../shared/config . && \
 	cp -r ../shared-pkgs/mods . && \
@@ -28,5 +32,10 @@ server-zip: server
 	zip -r ../server.zip *
 	mv server.zip sink-server-$(VERSION).zip
 
-clean:
+clean: cleanbuild
+
+cleanbuild:
 	rm -rf client-build* server-build*
+
+realclean: cleanbuild
+	rm sink-server-$(VERSION).zip vanilla-killed-the-modded-sink-$(VERSION).zip
