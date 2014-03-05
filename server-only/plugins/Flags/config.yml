@@ -20,7 +20,7 @@ Flags:
   # Setting these to 1 will process every event.  Do not set lower than 1, use only whole numbers.
   #
   BorderPatrol:
-    Enable: true
+    Enable: false
     EventDivisor: 10
     TimeDivisor: 500
   #
