@@ -7,7 +7,7 @@ GriefPrevention:
     MaxAccruedBlocks: 5000
     AutoSubClaimsSwitch: false
     DeleteWithUnrecognizedOwner: false
-    InitialBlocks: 100
+    InitialBlocks: 500
   Mods:
     Containers:
       IncludeRE: \schest\s|\schests\s|\sfurnace\s|\sgrinder\s|\sextruder\s|\smachine\s|\sengine\s|\sturtle\s|\saccumulator\s|\sprecipitator\s|\sAssembler\s|\sinfuser\s|\smachine\s|\sreceptacle\s|\s.*chest\s|\sTank\s|\sCrucible\s|smelter\s|\sworkbench\s|\stable\s|//sAutoCrafter//s|//sCharger//s|//sIceGen//s|//sSawmill//s|//sTransposer//s|//sWaterGen//s//s.*Shelf//s|//s.*Case//s|//s.*Rack//s|//s.*Label//s|//s.*Desk//s|//s.*Stand//s
