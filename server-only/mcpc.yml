@@ -74,6 +74,35 @@ world-settings:
   default:
     infinite-water-source: true
     flowing-lava-decay: false
+    despawn-immediate: true
+    worldgen-TConstruct-TBaseWorldGenerator: true
+    worldgen-modCustomOreGen-ModLoaderWorldGenerator: true
+    worldgen-ExtrabiomesXL-VanillaFloraGenerator: true
+    worldgen-ExtrabiomesXL-LeafPileGenerator: true
+    worldgen-ExtrabiomesXL-OilGenerator: true
+    worldgen-Natura-BaseCropWorldgen: true
+    worldgen-ExtrabiomesXL-FlowerGenerator: true
+    worldgen-ExtrabiomesXL-MountainDesertGenerator: true
+    worldgen-Thaumcraft-ThaumcraftWorldGenerator: true
+    worldgen-ProjRedExploration-GenerationManager: true
+    worldgen-Natura-BaseCloudWorldgen: true
+    worldgen-IC2-IC2: true
+    worldgen-633-FossilGenerator: true
+    worldgen-ExtrabiomesXL-CatTailGenerator: true
+    worldgen-chococraft-WorldGenGysahls: true
+    worldgen-CoFHWorld-WorldHandler: true
+    worldgen-ExtrabiomesXL-QuicksandGenerator: true
+    worldgen-633-WorldGenShipWreck: true
+    worldgen-633-WorldGenAcademy: true
+    worldgen-633-WorldGenWeaponShopA: true
+    worldgen-MineFactoryReloaded-MineFactoryReloadedWorldGen: true
+    worldgen-ExtrabiomesXL-EelGrassGenerator: true
+    worldgen-TConstruct-SlimeIslandGen: true
+    worldgen-ExtrabiomesXL-LegendOakGenerator: true
+    worldgen-Natura-BaseTreeWorldgen: true
+    worldgen-ExtrabiomesXL-VineGenerator: true
+    worldgen-ExtrabiomesXL-MountainRidgeGenerator: true
+    worldgen-CustomOreGenRevived-FMLInterface: true
 fake-players:
   do-login: false
 debug:
@@ -138,6 +167,7 @@ tick-intervals:
   codechicken-lib-world-WorldExtensionManager$WorldExtensionServerTickHandler: 1
   thermalexpansion-part-conduit-GridTickHandler: 1
   mrtjp-projectred-core-PRVersionChecker: 1
+  mods-immibis-core-commands-TPSCommand$TickHandler: 1
 world-environment-settings:
   normal:
     keep-world-loaded: true
