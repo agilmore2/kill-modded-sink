@@ -3,13 +3,13 @@ GriefPrevention:
     Enabled: true
     BlockContainers: true
     ProtectFreshSpawns: true
-    PunishLogout: true
+    PunishLogout: false
     CombatTimeoutSeconds: 15
     AllowCombatItemDrop: false
     BlockedSlashCommands: /home;/vanish;/spawn;/tpa
     ProtectPlayersInLandClaims:
-      PlayerOwnedClaims: false
-      AdministrativeClaims: false
+      PlayerOwnedClaims: true
+      AdministrativeClaims: true
   SeaLevelOverride:
     Enabled: false
   Enabled: true
@@ -74,24 +74,24 @@ GriefPrevention:
       PVP: Deny
     FireDestroys:
       Wilderness:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
       Claims:
         AboveSeaLevel: Deny
         BelowSeaLevel: Deny
         ClaimControl: Disabled
     FireSpreadOrigin:
       Wilderness:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
       Claims:
         AboveSeaLevel: Deny
         BelowSeaLevel: Deny
         ClaimControl: Disabled
     FireSpreadTarget:
       Wilderness:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
       Claims:
         AboveSeaLevel: Deny
         BelowSeaLevel: Deny
@@ -230,7 +230,7 @@ GriefPrevention:
     WaterBuckets:
       Place:
         Wilderness:
-          AboveSeaLevel: Deny
+          AboveSeaLevel: Allow
           BelowSeaLevel: Allow
         Claims:
           AboveSeaLevel: Allow
@@ -781,7 +781,7 @@ GriefPrevention:
     SiegeTamedAnimalDistance: 20
     Enabled: true
     MaxClaimBlocks: 0
-    BlocksAccruedPerHour: 100.0
+    BlocksAccruedPerHour: 200.0
     AbandonReturnRatio: 1.0
     PerPlayerLimit: 0
     SiegeLootChests: 0
@@ -791,7 +791,7 @@ GriefPrevention:
       UnusedClaimDays: 14
       AllClaimDays: 0
       AutomaticNatureRestoration: false
-    AutomaticNewPlayerClaimsRadius: 4
+    AutomaticNewPlayerClaimsRadius: 5
     ExtendIntoGroundDistance: 5
     CreationRequiresPermission: false
     MinimumSize: 10
@@ -831,7 +831,7 @@ GriefPrevention:
     ASCIIArtMinLength: 15
     ShortMessageMaxLength: 5
     KickThreshold: 6
-    BanThreshold: 8
+    BanThreshold: 0
     MuteThreshold: 4
     LoginCooldownSeconds: 60
     Enabled: true
