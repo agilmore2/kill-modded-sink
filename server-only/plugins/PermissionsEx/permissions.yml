@@ -3,3 +3,5 @@ groups:
     default: true
     permissions:
     - modifyworld.*
+    - bukkit.command.teleport
+
