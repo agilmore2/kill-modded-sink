@@ -1,0 +1,57 @@
+ore gen biome info
+
+tin: plains
+
+
+copper: jungle
+
+iron: snow.?
+
+
+emerald : hills only.?
+
+diamond : rare anywhere
+
+gold: snow.?
+
+aluminum: forest
+
+thermalexpansion
+silver mountainss/hills
+
+lead: $deserts
+
+nickel: swamps
+
+thaumcraft
+amber: mountains
+
+cinnabar: ocean near surface
+
+Air infused: plains
+fire infused: desert
+water infused: water doh!
+earth : mountain
+order: magic?!?
+entropy: magic
+
+Railcraft
+geodes: only ocean
+sulphur: everywhere
+saltpeter: deserts
+
+projectred:
+ruby: hills
+sapphire: hills
+periodot:hills
+
+standard:
+coal: swamps
+iron: snow/ice
+gold:forest
+redstone: desert
+diamond: all
+lapis: ocean
+emerald: hills
+
+
