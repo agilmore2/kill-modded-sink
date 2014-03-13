@@ -140,7 +140,7 @@ block {
 
 dimblacklist {
     # True: slime islands wont generate in any ages other than overworld(if enabled); False: will generate in all non-blackisted ages
-    B:GenerateSlimeIslandInDim0Only=false
+    B:GenerateSlimeIslandInDim0Only=true
 
     # Add dimension ID's to prevent slime islands from generating in them
     I:SlimeIslandDimBlacklist <
@@ -279,7 +279,7 @@ looks {
 
 superfun {
     B:"All the world is Superfun"=false
-    B:Enable-TCon-Capes=true
+    B:Enable-TCon-Capes=false
 }
 
 
@@ -386,7 +386,7 @@ worldgen {
     I:"Copper Bush Rarity"=3
 
     # Rarity: 1/num to generate in chunk
-    I:"Copper Surface Rarity"=100
+    I:"Copper Surface Rarity"=50
 
     # Density: Chances per chunk
     I:"Copper Underground Density"=2
@@ -399,7 +399,7 @@ worldgen {
     I:"Iron Bush Density"=1
     I:"Iron Bush Rarity"=5
     I:"Iron Surface Rarity"=400
-    I:"Nether Ores Density"=8
+    I:"Nether Ores Density"=16
     I:"Silver Bush Density"=1
     I:"Slime Island Rarity"=1450
     I:"Tin Bush Density"=2
