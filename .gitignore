@@ -15,3 +15,7 @@ stats
 screenshots
 world
 
+client-build*
+server-build*
+test-client
+bestseed
