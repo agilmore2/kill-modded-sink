@@ -56,30 +56,33 @@ key_Zoom:41
 key_key.command:53
 key_key.tarmor:24
 key_key.tcapes.reload:88
-key_Quest Log:38
 key_key.minimap.voxelmapmenu:39
 key_IC2 ALT Key:56
-key_IC2 Boost Key:29
+key_IC2 Boost Key:47
 key_IC2 Mode Switch Key:50
 key_IC2 Side Inventory Key:46
 key_IC2 Hub Expand Key:45
 key_MoCreatures Jump:57
-key_MoCreatures Dive:33
+key_MoCreatures Dive:44
 key_MoCreatures GUI:64
-key_Reposition Mob Portrait:52
+key_Reposition Mob Portrait:12
 key_key.backpack.openBackpack:48
 key_Change Wand Focus:33
+key_[GC] Galaxy Map:50
+key_[GC] Open Spaceship Inventory:23
+key_[GC] Toggle Sensor Goggles Mode:37
+key_[GC] Vehicle Forward Key:17
+key_[GC] Vehicle Backward Key:31
+key_[GC] Vehicle Left Key:30
+key_[GC] Vehicle Right Key:32
+key_[GC] Vehicle Up Key:57
+key_[GC] Vehicle Down Key:42
 key_morph.keybinds:209
 key_SwapArrowsForward:51
 key_SwapArrowsBackward:52
 key_ArrowToggle:40
 key_Change OneWayBlock face:43
-key_key.craftingGrid:46
 key_key.control:29
-key_keybind.loco.faster:52
-key_keybind.loco.slower:51
-key_keybind.loco.mode:50
-key_keybind.loco.whistle:49
 key_waila.keybind.wailaconfig:82
 key_waila.keybind.wailadisplay:79
 key_waila.keybind.liquid:80
