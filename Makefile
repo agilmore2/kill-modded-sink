@@ -1,6 +1,6 @@
 # Makefile for Vanilla Killed the Modded Sink
 
-VERSION=1.2dev
+VERSION=1.3dev
 TEMPCLNT := $(shell mktemp -u client-buildXXXX)
 TEMPSERV := $(shell mktemp -u server-buildXXXX)
 
@@ -31,6 +31,10 @@ server-zip: server
 	cd $(TEMPSERV) && \
 	zip -r ../server.zip *
 	mv server.zip sink-server-$(VERSION).zip
+
+test: client
+	rm test-client
+	ln -s $(TEMPCLNT) test-client
 
 clean: cleanbuild
 
