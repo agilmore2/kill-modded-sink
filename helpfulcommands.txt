@@ -1,1 +1,1 @@
-diff -ruBbwq -x logs -x \*MobAspects -I "^ *#.*$"
+diff -ruBbw -x logs -x \*MobAspects -x CustomSpawner -x DIAdvancedCompatibility.cfg -I "^ *#.*$" 
