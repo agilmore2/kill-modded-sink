@@ -10,7 +10,7 @@ client:
 	mkdir $(TEMPCLNT) && \
 	cd $(TEMPCLNT) && \
 	cp -r ../shared/* . && \
-	cp -r ../shared-pkgs/mods . && \
+	cp -r ../shared-pkgs/* . && \
 	cp -r ../client-pkgs/* . && \
 	cp -r ../client-only/* . && \
 	rm -r mods/disabled && \
@@ -20,7 +20,7 @@ server:
 	mkdir $(TEMPSERV) && \
 	cd $(TEMPSERV) && \
 	cp -r ../shared/* . && \
-	cp -r ../shared-pkgs/mods . && \
+	cp -r ../shared-pkgs/* . && \
 	cp -r ../server-pkgs/* . && \
 	cp -r ../server-only/* . && \
         rm -r mods/disabled && \
