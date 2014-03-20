@@ -164,10 +164,10 @@ Silicon
           
     <!--***************** Silicon *********************-->
           
-          <OptionChoice name='galactSiliconDist' default='SiliconVeins' displayState='shown' displayGroup='groupgalacticraft'> 
+          <OptionChoice name='galactSiliconDist' default='layeredVeins' displayState='shown' displayGroup='groupgalacticraft'> 
               <Description> Controls how Silicon is generated </Description> 
               <DisplayName>GC Silicon Type</DisplayName>
-              <Choice value='SiliconVeins' displayValue='Veins'>
+              <Choice value='layeredVeins' displayValue='Veins'>
                   <Description>
                       Short sand-filled tubes extending upward from bedrock with ore around the edges.  More common under the desert. 
                   </Description>
@@ -485,9 +485,9 @@ C      <IfCondition condition=':= if(age, age.galactAluminumClusters > 0, galact
             </IfCondition>
                 
             <IfCondition condition=':= if(age, age.galactSiliconVeins > 0, galactSiliconDist = "layeredVeins")'>
-                <Veins name='galactSiliconVeins' block='gcBlockCore:8' inherits='PresetPipeVeins'> 
+                <Veins name='galactSiliconVeins' block='gcBlockCore:8' inherits='PresetPipeVeins' seed='0xdeadbeef'> 
                     <Description> 
-                        Silicon is often processed from silicon dioxide, also known as sand. Purer deposits of silicon are found close to bedrock with pipes of sand and are more common in desert areas.
+                        Silicon is often processed from silicon dioxide AKA sand. Usable deposits of silicon are found close to bedrock surrounding pipes of sand. Silicon ore is more common in desert areas.
                     </Description>  
                     <DrawWireframe>:=drawWireframes</DrawWireframe>
                     <WireframeColor>0x609447a8</WireframeColor> 
@@ -499,12 +499,13 @@ C      <IfCondition condition=':= if(age, age.galactAluminumClusters > 0, galact
                     <Biome name='.*' weight='.35'/>
                     <BiomeType name='Desert'/>
                 </Veins>
-                <Veins name='galactSiliconVeinsSand' block='12' inherits='galactSiliconVeins' seed='0xFF0301'>
+                <Veins name='galactSiliconVeinsSand' block='12' inherits='galactSiliconVeins' seed='0xdeadbeef'>
                     <Description> Fills center of each tube with sand </Description>
                     <Setting name='MotherlodeSize' avg=':= 0.4 * _default_'/>
                     <Setting name='SegmentRadius' avg=':= 0.4 * _default_'/>
                     <Setting name='OreDensity' avg='0.5' range='0'/>
                     <ReplacesOre block='stone'/>
+                    <Replaces block='gravel'/>
                     <Replaces block='gcBlockCore:8'/>
                 </Veins>
             </IfCondition>
