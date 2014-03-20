@@ -13,8 +13,8 @@ client:
 	cp -r ../shared-pkgs/mods . && \
 	cp -r ../client-pkgs/* . && \
 	cp -r ../client-only/* . && \
-	rm -r $(TEMPCLNT)/mods/disabled && \
-	rm -r $(TEMPCLNT)/mods/bundledpackages 
+	rm -r mods/disabled && \
+	rm -r mods/bundledpackages 
 
 server:
 	mkdir $(TEMPSERV) && \
@@ -23,8 +23,8 @@ server:
 	cp -r ../shared-pkgs/mods . && \
 	cp -r ../server-pkgs/* . && \
 	cp -r ../server-only/* . && \
-        rm -r $(TEMPSERV)/mods/disabled && \
-        rm -r $(TEMPSERV)/mods/bundledpackages 
+        rm -r mods/disabled && \
+        rm -r mods/bundledpackages 
 
 client-zip: client
 	cd $(TEMPCLNT) && \
