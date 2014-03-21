@@ -50,7 +50,7 @@
             <DisplayName>Ore Frequency</DisplayName>
         </OptionNumeric>
         
-        <OptionNumeric name='oreSize' default='1.0' min='0' max='5' displayState='shown' displayGroup='groupGeneral'>
+        <OptionNumeric name='oreSize' default='1' min='0' max='5' displayState='shown' displayGroup='groupGeneral'>
             <Description> 
                 A global multiplier for the size of all ore distributions. 
             </Description>
@@ -379,7 +379,7 @@
     <Import file='modules/default/Dartcraft.xml'/>
 <!--<Import file='modules/default/TinkersConstruct.xml'/>-->
     <Import file='modules/default/Metallurgy.xml'/>
-    <Import file='modules/default/Railcraft.xml'/>
+<!--<Import file='modules/default/Railcraft.xml'/>-->
 <!--<Import file='modules/default/Thaumcraft4.xml'/>-->
     <Import file='modules/default/BiomesOPlenty.xml'/>
     <Import file='modules/default/Factorization.xml'/>
