@@ -28,19 +28,20 @@ server:
 
 client-zip: client
 	cd $(TEMPCLNT) && \
-	zip -r ../client.zip *
-	mv client.zip vanilla-killed-the-modded-sink-$(VERSION).zip
+	zip -r ../$(TEMPCLNT).zip *
+	mv $(TEMPCLNT).zip vanilla-killed-the-modded-sink-$(VERSION).zip
 
 server-zip: server
 	cd $(TEMPSERV) && \
-	zip -r ../server.zip *
-	mv server.zip sink-server-$(VERSION).zip
+	zip -r ../$(TEMPSERV).zip *
+	mv $(TEMPSERV).zip sink-server-$(VERSION).zip
 
 test: client
 	rm test-client
 	ln -s $(TEMPCLNT) test-client
 
 clean: cleanbuild
+	rm test-client
 
 cleanbuild:
 	rm -rf client-build* server-build*
