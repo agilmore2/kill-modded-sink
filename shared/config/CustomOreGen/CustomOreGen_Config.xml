@@ -69,7 +69,7 @@
             <Choice value='false' displayValue='Off'/>
         </OptionChoice> 
         
-        <OptionNumeric name='deferredPopulationRange' default='0' displayGroup='groupGeneral'>
+        <OptionNumeric name='deferredPopulationRange' default='32' displayGroup='groupGeneral'>
             <Description> 
                 Radius (in blocks) around a chunk must be generated before COG will add ores to it. 
             </Description>
@@ -83,7 +83,7 @@
             <DisplayIncrement>16</DisplayIncrement>
         </OptionNumeric> 
         
-        <OptionChoice name='vanillaOreGen' default='false' displayGroup='groupGeneral'>
+        <OptionChoice name='vanillaOreGen' default='true' displayGroup='groupGeneral'>
             <Description> 
                 Enable/disable the vanilla ore generators for coal, iron, gold, redstone, lapis lazuli, and diamond.  
             </Description>
