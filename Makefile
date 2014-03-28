@@ -1,6 +1,6 @@
 # Makefile for Vanilla Killed the Modded Sink
 
-VERSION=1.4
+VERSION=1.5
 TEMPCLNT := $(shell mktemp -u client-buildXXXX)
 TEMPSERV := $(shell mktemp -u server-buildXXXX)
 
