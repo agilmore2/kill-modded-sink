@@ -19,3 +19,5 @@ client-build*
 server-build*
 test-client
 bestseed
+.minecraft
+.java
