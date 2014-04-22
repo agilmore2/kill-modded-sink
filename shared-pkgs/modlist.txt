@@ -1,0 +1,58 @@
+1.6.4
+[1.6.4]bspkrsCorev5.3.zip
+[1.6.4]TreeCapitator.Forge.1.6.4.r09.Universal.zip
+advanced-machines-57.3.3.jar
+BiblioCraft[v1.5.5].zip
+bundledpackages
+Chococraft_3.0.3.zip
+CodeChickenCore 0.9.0.9.jar
+CoFHCore-2.0.0.5.jar
+CustomMobSpawner 3.0.0.zip
+CustomOreGenRevived-1.6.4-1.0.24.jar
+disabled
+DrZharks MoCreatures Mod v6.1.0.zip
+ElectroMagicTools-1.0.9d.jar
+ExtrabiomesXL-universal-1.6.4-3.15.7.jar
+files^MobAmputation2.0.1.zip
+files^Torched2.0.0.zip
+fossilsarch-reported-v1.0.6.jar
+Galacticraft-1.6.4-2.0.11.978.jar
+Galacticraft-Planets-1.6.4-2.0.11.978.jar
+GregsLighting-1.9.1-mc1.6.4.jar
+Highlands2.1.7_MC1.6.4.zip
+ic2
+IC2NuclearControl-1.6.2e-ic2-experimental.zip
+immibis-core-57.2.0.jar
+immibis-microblocks-57.6.4.jar
+industrialcraft-2_2.0.397-experimental.jar
+ironchest-universal-1.6.4-5.4.1.702.zip
+MicdoodleCore-1.6.4-2.0.11.978.jar
+MineFactoryReloaded-2.7.8-482.jar
+Morph-Beta-0.7.1.zip
+MultiMine_1.6.4.jar
+Natura_mc1.6.X_2.1.14.jar
+NEIPlugins-1.1.0.6.jar
+NotEnoughItems 1.6.1.8.jar
+PlantMegaPack_2.20.zip
+PortalGun2.0.2.zip
+PortalGunSounds.pak
+PowerCrystalsCore-1.1.8-9.jar
+ProjectRedBase-1.6.4-4.3.5.30.jar
+ProjectRedCompat-1.6.4-4.3.5.30.jar
+ProjectRedIntegration-1.6.4-4.3.5.30.jar
+ProjectRedMechanical-BETA-1.6.4-4.3.5.30.jar
+ProjectRedWorld-1.6.4-4.3.5.30.jar
+Railcraft_1.6.4-8.4.0.0.jar
+SecretRoomsMod-universal-1.6.4-4.6.2.324.jar
+TConstruct_mc1.6.4_1.5.5.1.jar
+Thaumcraft4.1.0g.zip
+thaumcraftmobaspects-1.6.X-1e-build2.zip
+ThermalExpansion-3.0.0.5.jar
+TMechworks_mc1.6.4_0.1.6.jar
+twilightforest-1.6.4-1.20.5.jar
+Universal-Electricity-3.1.0.87-core.jar
+util^iChunUtil2.4.0.zip
+Waila_1.5.1a.zip
+WeaponMod.zip
+WR-CBE 1.4.0.7.jar
+yafm-1.0.0.jar

@@ -11,7 +11,7 @@ bobView:true
 anaglyph3d:false
 advancedOpengl:false
 fpsLimit:0
-difficulty:0
+difficulty:1
 fancyGraphics:false
 ao:0
 clouds:true
@@ -83,8 +83,13 @@ key_SwapArrowsBackward:52
 key_ArrowToggle:40
 key_Change OneWayBlock face:43
 key_key.control:29
+key_keybind.loco.faster:52
+key_keybind.loco.slower:51
+key_keybind.loco.mode:50
+key_keybind.loco.whistle:49
 key_waila.keybind.wailaconfig:82
 key_waila.keybind.wailadisplay:79
 key_waila.keybind.liquid:80
 key_waila.keybind.recipe:81
 key_waila.keybind.usage:75
+key_key.matmos:65

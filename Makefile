@@ -1,6 +1,6 @@
 # Makefile for Vanilla Killed the Modded Sink
 
-VERSION=1.5
+VERSION=1.6
 TEMPCLNT := $(shell mktemp -u client-buildXXXX)
 TEMPSERV := $(shell mktemp -u server-buildXXXX)
 
@@ -14,7 +14,8 @@ client:
 	cp -r ../client-pkgs/* . && \
 	cp -r ../client-only/* . && \
 	rm -rf mods/disabled && \
-	rm -rf mods/bundledpackages 
+	rm -rf mods/bundledpackages && \
+	zip -uj bin/modpack.jar version.json
 
 server:
 	mkdir $(TEMPSERV) && \

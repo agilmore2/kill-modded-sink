@@ -1,0 +1,14 @@
+.:
+list.txt
+mcpc-plus-1.6.4-R2.1-forge965-B236.jar
+plugins
+
+./plugins:
+bundles
+FlagsCore.jar
+Flags.jar
+GriefPrevention.jar
+PermissionsEx.jar
+
+./plugins/bundles:
+Flags.zip
