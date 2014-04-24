@@ -56,7 +56,7 @@ chocopediaInDungeons = true
 // all biomes.
 // Possible biome names:
 // River_ice, Plains, Desert, Extreme Hills, Forest, Taiga, Swampland, River, Hell, Sky, FrozenOcean, FrozenRiver, Ice Plains, Ice Mountains, MushroomIsland, MushroomIslandShore, Beach, DesertHills, ForestHills, TaigaHills, Extreme Hills Edge, Jungle, JungleHills, rainforest, swampland, seasonalForest, forest, savanna, shrubland, taiga, desert, plains, tundra, rainforest, swampland, seasonalForest, forest, savanna, shrubland, taiga, desert, plains, tundra, Infdev, Infdev Snow, Indev, Indev, Indev, Indev, Indev, Survival Island, Survival Island, Survival Island, Survival Island, Survival Skyland, Survival Skyland, Survival Skyland, Hell, Survival Skyblock, Ocean, Tropical Island, Jungle Island, Mushroom Island, Beach, Beach Dunes, Snow Pines, Snow Forest, Snow Taiga, Snow Plains, Snow Hills, Plains, Forest, Forest Hills, Forest Lakes, Pines, Taiga, Grassland, Rainforest, Jungle, Swampland, Desert, Savanna, Savanna Forest, Shrubland, River_normal, River_green, River_sand, Jungle, Swampland, Ocean Oil Field, Desert Oil Field
-spawnBiomes = Extreme Hills,Extreme Hills Edge,Forest,ForestHills,Jungle,JungleHills,Plains,Swampland,Taiga,TaigaHills,Ice Mountains,Ice Plains,Hell
+spawnBiomes = Extreme Hills,Extreme Hills Edge,Forest,ForestHills,Jungle,JungleHills,Plains,Swampland,Taiga,TaigaHills,Grassland,Rainforest,Savanna,Savanna Forest,Shrubland,Ice Mountains,Ice Plains,Hell
 
 // A group of spawnGroupMin to spawnGroupMax Yellow Chocobos will spawn with the
 // probability of spawnProbability around every player. There will be no additional
