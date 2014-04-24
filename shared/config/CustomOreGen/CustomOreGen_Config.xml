@@ -379,7 +379,7 @@
     <Import file='modules/default/Dartcraft.xml'/>
 <!--<Import file='modules/default/TinkersConstruct.xml'/>-->
     <Import file='modules/default/Metallurgy.xml'/>
-<!--<Import file='modules/default/Railcraft.xml'/>-->
+    <Import file='modules/default/Railcraft.xml'/>
     <Import file='modules/default/Thaumcraft4.xml'/>
     <Import file='modules/default/BiomesOPlenty.xml'/>
     <Import file='modules/default/Factorization.xml'/>
