@@ -15,12 +15,12 @@
 ### END INIT INFO
 
 #Settings
-SERVICE='mcpc-plus-1.6.4-R2.1-forge965-B236.jar'
+SERVICE='mcpc-plus-1.6.4-R2.1-forge965-B236+pingfix.jar'
 USERNAME="minecraft"
 MCPATH="/home/$USERNAME/sink-server"
 #MCPATH='/dev/shm/patserver'
 CPU_COUNT=1
-INVOCATION="java -Xmx1024M -Xms256M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts -jar $SERVICE nogui"
+INVOCATION="java -Xmx1536M -Xms512M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts -jar $SERVICE nogui"
 BACKUPPATH="/home/$USERNAME/sink-server-backups/"
 
 
