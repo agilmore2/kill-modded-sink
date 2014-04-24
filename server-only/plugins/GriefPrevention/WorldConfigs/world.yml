@@ -98,12 +98,12 @@ GriefPrevention:
         ClaimControl: Disabled
     CreeperExplosions:
       Wilderness:
-        AboveSeaLevel: Allow
+        AboveSeaLevel: Deny
         BelowSeaLevel: Deny
         SeaLevel: '-1'
       Claims:
-        AboveSeaLevel: Allow
-        BelowSeaLevel: Allow
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
         SeaLevel: '-1'
         ClaimControl: Disabled
     WitherExplosions:
@@ -250,7 +250,7 @@ GriefPrevention:
     LavaBuckets:
       Place:
         Wilderness:
-          AboveSeaLevel: Deny
+          AboveSeaLevel: Allow
           BelowSeaLevel: Allow
           RequiredPermissions:
           - griefprevention.placement.lava
@@ -311,8 +311,8 @@ GriefPrevention:
         ClaimControl: RequireBuild
     VillagerTrading:
       Wilderness:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
         SeaLevel: '-1'
       Claims:
         AboveSeaLevel: Allow
@@ -584,8 +584,8 @@ GriefPrevention:
         ClaimControl: RequireBuild
     FireSetting:
       Wilderness:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
         RequiredPermissions:
         - GriefPrevention.Lava
         SeaLevel: '-1'
@@ -626,12 +626,12 @@ GriefPrevention:
         ClaimControl: RequireAccess
     EquineInventory:
       Wilderness:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
         SeaLevel: '-1'
       Claims:
-        AboveSeaLevel: Deny
-        BelowSeaLevel: Deny
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
         SeaLevel: '-1'
         ClaimControl: RequireNone
     NameTags:
@@ -791,24 +791,24 @@ GriefPrevention:
       UnusedClaimDays: 14
       AllClaimDays: 0
       AutomaticNatureRestoration: false
-    AutomaticNewPlayerClaimsRadius: 5
+    AutomaticNewPlayerClaimsRadius: 8
     ExtendIntoGroundDistance: 5
     CreationRequiresPermission: false
-    MinimumSize: 10
-    MinimumBlocks: 100
+    MinimumSize: 6
+    MinimumBlocks: 36
     MaximumDepth: 0
-    TrappedCommandCooldownMinutes: 480
+    TrappedCommandCooldownMinutes: 5
     InvestigationTool: STICK
     ModificationTool: GOLD_SPADE
     WarnWhenBuildingOutsideClaims: true
     AllowUnclaimingLand: true
     AutoRestoreUnclaimedLand: true
-    WildernessWarningBlockCount: 15
+    WildernessWarningBlockCount: 1
   DenyAllExplosions: false
   Siege:
     ItemTransfer: true
     BlockRevert: false
-    Enabled: true
+    Enabled: false
     BreakableBlocks:
     - DIRT,0,1.0
     - GRASS,0,1.0
@@ -836,7 +836,7 @@ GriefPrevention:
     LoginCooldownSeconds: 60
     Enabled: true
     MonitorSlashCommands: /me;/tell;/global;/local
-    WarningMessage: Please reduce your noise level.  Spammers will be banned.
+    WarningMessage: Please reduce your noise level.  Spammers will be kicked/banned.
     KickMessage: Kicked for spamming.
     BanMessage: Banned for spamming.
     AllowedIpAddresses: 1.2.3.4; 5.6.7.8
@@ -856,9 +856,9 @@ GriefPrevention:
       Ignore: 0
   CreativeRules: false
   Eavesdrop:
-    Enabled: false
+    Enabled: true
     Signs: true
-    BookDrop: false
+    BookDrop: true
     WhisperCommands: /tell;/pm;/r
   TrashBlocks: []
   Trees:
