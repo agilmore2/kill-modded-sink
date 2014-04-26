@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="3.0" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://files.mcupdater.com/ServerPackv2.xsd">
+	<Server id="mutari-remote" name="Mutari Labellum Remote" newsUrl="http://sites.google.com/sites/mutarilabellum/home.html" version="1.6.4" mainClass="net.minecraft.launchwrapper.Launch" serverAddress="jeepers.not.allowed.org:44123" revision="1.6" autoConnect="false">
+		<Import>mutari-local</Import>
+	</Server>
+	<Server id="mutari-local" name="Mutari Labellum Local" newsUrl="http://sites.google.com/sites/mutarilabellum/home.html" version="1.6.4" mainClass="net.minecraft.launchwrapper.Launch" serverAddress="10.1.42.119:44123" revision="1.6" autoConnect="false">
+<!--		<Import url="http://files.mcupdater.com/example/forge.php?mc=1.6.4&amp;forge=9.11.1.965">forge</Import>-->
+		<Module id="forge-9.11.1.965" name="Minecraft Forge">
+		  <URL>
+		    http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.4-9.11.1.965/forge-1.6.4-9.11.1.965-universal.jar
+		  </URL>
+		  <Required>true</Required>
+		  <ModType order="1" launchArgs="--tweakClass cpw.mods.fml.common.launcher.FMLTweaker">Library</ModType>
+		  <MD5/>
+		  <Submodule id="launchwrapper" name="Mojang (LaunchWrapper)">
+		    <URL>
+		      https://libraries.minecraft.net/net/minecraft/launchwrapper/1.8/launchwrapper-1.8.jar
+		    </URL>
+		    <Required>true</Required>
+		    <ModType order="2">Library</ModType>
+		    <MD5>460ffeedae268dc70c8210ce179fa44a</MD5>
+		  </Submodule>
+		  <Submodule id="asm" name="Mojang (ASM)">
+		    <URL>
+		      https://libraries.minecraft.net/org/ow2/asm/asm-all/4.1/asm-all-4.1.jar
+		    </URL>
+		    <Required>true</Required>
+		    <ModType order="3">Library</ModType>
+		    <MD5>d21c2a06a4e6b175aa01e328f38a1182</MD5>
+		  </Submodule>
+		  <Submodule id="scala-lib" name="Minecraft Forge (scala-library)">
+		    <URL>
+		      http://files.minecraftforge.net/maven/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar.pack.xz
+		    </URL>
+		    <Required>true</Required>
+		    <ModType order="4">Library</ModType>
+		    <MD5>012a98cce6672b05d1126bd461daaf41</MD5>
+		  </Submodule>
+		  <Submodule id="scala-compiler" name="Minecraft Forge (scala-compiler)">
+		    <URL>
+		      http://files.minecraftforge.net/maven/org/scala-lang/scala-compiler/2.10.2/scala-compiler-2.10.2.jar.pack.xz
+		    </URL>
+		    <Required>true</Required>
+		    <ModType order="5">Library</ModType>
+		    <MD5>e1406c87b06e3548c3d0642665b1b0fd</MD5>
+		  </Submodule>
+		  <Submodule id="lzma" name="Mojang (LZMA)">
+		    <URL>
+		      https://libraries.minecraft.net/lzma/lzma/0.0.1/lzma-0.0.1.jar
+		    </URL>
+		    <Required>true</Required>
+		    <ModType order="6">Library</ModType>
+		    <MD5>a3e3c3186e41c4a1a3027ba2bb23cdc6</MD5>
+		  </Submodule>
+		</Module>
+		<Module id="liteloader" name="LiteLoader" depends="" side="CLIENT">
+<!--  Example: ModType Library  -->
+                <URL>http://dl.liteloader.com/versions/com/mumfrey/liteloader/1.6.4/liteloader-1.6.4.jar</URL>
+		<Required isDefault="true">false</Required>
+		<ModType order="10" launchArgs="--tweakClass com.mumfrey.liteloader.launch.LiteLoaderTweaker">Library</ModType>
+		<MD5>531c116f71ae2b11033f9a11a0f8e668</MD5>
+		</Module>
+<!--		<Module name="Advanced Machines" id="AdvancedMachines" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/advanced-machines-57.3.3.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>d4d319c25fd489917cba685df90caa67</MD5>
+			<Meta>
+				<authors>immibis</authors>
+				<description>Upgraded IC2 machines</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/1001131-/</url>
+				<version>57.3.3</version>
+			</Meta>
+		</Module>
+		<Module name="Balkon's WeaponMod" id="weaponmod" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/WeaponMod.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7d17d465094440fd4409631ec5b3181b</MD5>
+			<Meta>
+				<authors>BalkondeurAlpha</authors>
+				<description>Throw a spear in a zombie&apos;s head!
+Cut a skeleton in half with your brand new halberd!
+Shoot some slimes in pieces with an old musket!
+And more!</description>
+				<credits></credits>
+				<url>www.minecraftforum.net/topic/211517-bwm</url>
+				<version>1.13.6</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/weaponmod.cfg</URL>
+				<Path>config/weaponmod.cfg</Path>
+				<MD5>65fcfdc42364994b43678e32d98dcc3a</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="BiblioCraft" id="BiblioCraft" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/BiblioCraft[v1.5.5].zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>cd7736872df8af0fb2625be67d1968be</MD5>
+			<Meta>
+				<authors>Joseph &apos;Nuchaz&apos; Sinclair</authors>
+				<description>BiblioCraft adds fancy storage containers including bookcases, armor stands, potion shelves, regular shelves, tool racks, glass weapon cases, wooden desks and wooden chest labels and now add machines, redstone interactions, and eyeware, fancy lamps and golden lanterns. Also Tables, enchanted plates, map frames, and seats!</description>
+				<credits></credits>
+				<url>http://www.bibliocraftmod.com</url>
+				<version>1.5.5</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioCraft.cfg</URL>
+				<Path>config/BiblioCraft.cfg</Path>
+				<MD5>b8a9637b1cf972dd7b7a24b9c3342216</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="BiblioWoods ExtraBiomesXL Edition" id="BiblioWoodsEBXL" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/BiblioWoods[ExtraBiomesXL][v1.1].zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0be9ddc9977cdf7e94a5455463af8a1e</MD5>
+			<Meta>
+				<authors>Joseph &amp;apos;Nuchaz&amp;apos; Sinclair</authors>
+				<description>Adds support for 9 varietys of wood from ExtraBiomesXL for 8 of the wooden block in BiblioCraft.</description>
+				<credits>Annysia, Scott Killian and the entire ExtraBiomesXL team for creating ExtraBiomesXL and the origanal textures I maniplated to fit BiblioCraft Blocks</credits>
+				<url>http://www.bibliocraftmod.com</url>
+				<version>1.1</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioWoodsEBXL.cfg</URL>
+				<Path>config/BiblioWoodsEBXL.cfg</Path>
+				<MD5>a5e65fe747e6540f1fd10622c4b696a2</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioWoodsEBXL.cfg~</URL>
+				<Path>config/BiblioWoodsEBXL.cfg~</Path>
+				<MD5>9cea9f28c5cbef6b91c78a528e437cf3</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="BiblioWoods Highlands Edition" id="BiblioWoodsHighlands" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/BiblioWoods[Highlands][v1.1].zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4c4ac773b820e0683ccb348b3f97aba4</MD5>
+			<Meta>
+				<authors>Joseph &amp;apos;Nuchaz&amp;apos; Sinclair</authors>
+				<description>Adds support for 4 varietys of wood from Highlands for 8 of the wooden block in BiblioCraft.</description>
+				<credits>sdj64 for creating Highlands and the origanal textures I maniplated to fit BiblioCraft Blocks</credits>
+				<url>http://www.bibliocraftmod.com</url>
+				<version>1.1</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioWoodsHighlands.cfg</URL>
+				<Path>config/BiblioWoodsHighlands.cfg</Path>
+				<MD5>fc3c004117724b91f05790482eb04463</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioWoodsHighlands.cfg~</URL>
+				<Path>config/BiblioWoodsHighlands.cfg~</Path>
+				<MD5>edd57043099deeb430f34e9f0a021910</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="BiblioWoods Natura Edition" id="BiblioWoodsNatura" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/BiblioWoods[Natura][v1.1].zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3c6eefb070d5310da42dab30dd14b8c9</MD5>
+			<Meta>
+				<authors>Joseph &amp;apos;Nuchaz&amp;apos; Sinclair</authors>
+				<description>Adds support for 13 varietys of wood from Natura for 8 of the wooden block in BiblioCraft.</description>
+				<credits>mDiyo for creating Natura and the origanal textures I maniplated to fit BiblioCraft Blocks</credits>
+				<url>http://www.bibliocraftmod.com</url>
+				<version>1.1</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioWoodsNatura.cfg</URL>
+				<Path>config/BiblioWoodsNatura.cfg</Path>
+				<MD5>9933f48ab31a508fb4ff3806fd1d1756</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/BiblioWoodsNatura.cfg~</URL>
+				<Path>config/BiblioWoodsNatura.cfg~</Path>
+				<MD5>1e4adace363032955b022025ca51673f</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="bspkrsCore" id="bspkrsCore" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/[1.6.4]bspkrsCorev5.3.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>70e0d7cbfe8d7f6d53cc130d70e2f3d4</MD5>
+			<Meta>
+				<authors>DaftPVF, bspkrs</authors>
+				<description>Shared classes used in the mods maintained by bspkrs.</description>
+				<credits>Much of this code was originally part of DaftPVF&apos;s mods that I maintain.
+Additional credit to Risugami and LexManos.</credits>
+				<url>http://www.minecraftforum.net/topic/1114612-/</url>
+				<version>v5.3(1.6.4)</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/bspkrs_ModVersionCheckerTracking.txt</URL>
+				<Path>config/bspkrs_ModVersionCheckerTracking.txt</Path>
+				<MD5>4ed299d1ab538c6a849f94ad12325939</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/bspkrsCore.cfg</URL>
+				<Path>config/bspkrsCore.cfg</Path>
+				<MD5>76d468a49dc0c8efa1d9d4be16f166a4</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="BuildCraft" id="BuildCraft|Core" depends="" side="BOTH">
+			<URL priority="0">http://localhost/mods/buildcraft-A-1.6.4-4.2.2.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3d2b0dad2291f1c0bb0c5b8c96303b68</MD5>
+			<Meta>
+				<authors>SpaceToad, BuildCraft Team</authors>
+				<description>Extending Minecraft with pipes, auto-crafting, quarries, engines and much more!</description>
+				<credits>Created by SpaceToad</credits>
+				<url>http://www.mod-buildcraft.com/</url>
+				<version>4.2.2</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/buildcraft/main.conf</URL>
+				<Path>config/buildcraft/main.conf</Path>
+				<MD5>21d81625b3a1d91d5aff315afa819859</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="CodeChickenCore" id="CodeChickenCore" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/CodeChickenCore%200.9.0.7.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f81ca854f4455259d066708fa729d18c</MD5>
+			<Meta>
+				<authors>ChickenBones</authors>
+				<description>Core library for all ChickenBones mods</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/909223</url>
+				<version>0.9.0.7</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/CodeChickenCore.cfg</URL>
+				<Path>config/CodeChickenCore.cfg</Path>
+				<MD5>aa5c07f3d234e3b2bd556b32ddd8d849</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="CoFH Core" id="CoFHCore" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/CoFHCore-2.0.0.5.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a3c5c440ecc89ff9b2d3ca777e44722b</MD5>
+			<Meta>
+				<authors>Team CoFH</authors>
+				<description>CoFH Core Module</description>
+				<credits>Team CoFH</credits>
+				<url>http://www.teamcofh.com</url>
+				<version>2.0.0.5</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/cofh/CoFHWorld.cfg</URL>
+				<Path>config/cofh/CoFHWorld.cfg</Path>
+				<MD5>17bdada03a049e81d8525c906bc86031</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/cofh/CoFHCore.cfg</URL>
+				<Path>config/cofh/CoFHCore.cfg</Path>
+				<MD5>13515152f565372bf3eac8aff21ad0b1</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/cofh/CoFHWorld-Generation.cfg</URL>
+				<Path>config/cofh/CoFHWorld-Generation.cfg</Path>
+				<MD5>c06b50f4673fb22cb3f48dab026079f1</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Custom Ore Generation: First Revival" id="CustomOreGenRevived" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/CustomOreGenRevived-1.6.4-1.0.24.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>311a6fee8d371264f9b253976e0d306f</MD5>
+			<Meta>
+				<authors>JRoush, noogenesis</authors>
+				<description>Allows the player to customize how ore is generated.</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/1935710-162forge-custom-ore-generation-first-revival/</url>
+				<version>1.0.24</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/CustomOreGen/CustomOreGen_Config.xml</URL>
+				<Path>config/CustomOreGen/CustomOreGen_Config.xml</Path>
+				<MD5>bf920019dc11fa4203355dc63820c749</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/CustomOreGen/modules/custom/Galacticraft.xml</URL>
+				<Path>config/CustomOreGen/modules/custom/Galacticraft.xml</Path>
+				<MD5>9bbf4c82e320d306a19fc4c129d8aa8a</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/CustomOreGen/modules/custom/TinkersConstruct.xml</URL>
+				<Path>config/CustomOreGen/modules/custom/TinkersConstruct.xml</Path>
+				<MD5>40c5a1afbf8d490b1bc24bf8bb3b56ea</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Damage Indicators" id="DamageIndicatorsMod" depends="" side="CLIENT">
+			<URL priority="0">http://localhost//mods/1.6.4%20DamageIndicatorsv2.9.2.3.zip</URL>
+			<Required isDefault="true">false</Required>
+			<ModType>Regular</ModType>
+			<MD5>53ea32c1fad3cf38c1fe6c4562307d3e</MD5>
+			<Meta>
+				<authors>rich1051414</authors>
+				<description>Displays the damage you inflict on creatures, as well as current health, name and potion effects.</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/1536685-</url>
+				<version>2.9.2.3</version>
+			</Meta>
+		</Module>
+		<Module name="DrZhark's CustomSpawner" id="CustomSpawner" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/CustomMobSpawner%203.0.0.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>dbbd899c0cdda8a5a888589c4ca0fcd1</MD5>
+			<Meta>
+				<authors>DrZhark, Bloodshot</authors>
+				<description>Allows mods to take control of spawning of custom mobs</description>
+				<credits>Authored by DrZhark and BloodShot</credits>
+				<url>http://www.minecraftforum.net/topic/1080677-145-custom-mob-spawner/</url>
+				<version>3.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="DrZhark's Mo'Creatures Mod" id="MoCreatures" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/DrZharks%20MoCreatures%20Mod%20v6.1.0.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>745b9cb0ad9d5633bd5e0fb39c750e85</MD5>
+			<Meta>
+				<authors>DrZhark, BloodShot, BlockDaddy</authors>
+				<description>This mod adds many more creatures to Minecraft</description>
+				<credits>Authored by DrZhark, coding, AI, animations: DrZhark.  Models, textures: Kent Jensen, DrZhark.  SMP coding: DrZhark, BloodShot</credits>
+				<url>http://www.minecraftforum.net/viewtopic.php?f=25&amp;t=86929</url>
+				<version>6.1.0</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/MoCreatures/MoCreatures.cfg</URL>
+				<Path>config/MoCreatures/MoCreatures.cfg</Path>
+				<MD5>acf553212b45894756e5436e32a4d3fc</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/MoCreatures/MoCSettings.cfg</URL>
+				<Path>config/MoCreatures/MoCSettings.cfg</Path>
+				<MD5>c19fcff8bf500b902d63e451f6bf3f66</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Electric Magic Tools" id="ElectricMagicTools" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ElectroMagicTools-1.0.9d.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f492b0f3b99a473667e65c320d9e53eb</MD5>
+			<Meta>
+				<authors>Tombenpotter</authors>
+				<description>Have you ever thought about combining IC2 and TC4?</description>
+				<credits>All the guys who helped me in any way, shape or form, and beta testers I bug to try and break my stuff. And of course the IC2 team and Azanor</credits>
+				<url>http://www.minecraftforum.net/topic/2196652-164smpindustrialcraft-2thaumcraft-electric-magic-tools/</url>
+				<version>${1.0.7}</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Tombenpotter&apos;s%20Electro-Magic%20Tools.cfg</URL>
+				<Path>config/Tombenpotter&amp;apos;s Electro-Magic Tools.cfg</Path>
+				<MD5>77bc0d60bada5e7e66b33357aaa898c2</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="ExtrabiomesXL" id="ExtrabiomesXL" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ExtrabiomesXL-universal-1.6.4-3.15.7.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ed646a1a48ec3c503864905ab4b546e7</MD5>
+			<Meta>
+				<authors>MisterFiber, ScottKillen, JLBShecky, bspkrs, allaryin, ExterminatorJeff, TDWP_FTW</authors>
+				<description>ExtrabiomesXL adds new aesthetic content that greatly enhances Minecraft&apos;s landscapes and exploration.</description>
+				<credits>Concept and original mod created by MisterFiber. Some artwork courtesy of: bonemouse and Delocuro. Code contributors: Eloraam, mistaqur, SirSengir, bolte-17. Additional help: acmfan</credits>
+				<url>http://www.minecraftforum.net/topic/1090288-</url>
+				<version>1.6.4-3.15.7</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/extrabiomes.cfg</URL>
+				<Path>config/extrabiomes.cfg</Path>
+				<MD5>716d9bf3b6569025bf82a6da7026a18a</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="files^MobAmputation2.0.1" id="files^MobAmputation" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/files^MobAmputation2.0.1.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>21815cf3a4c92762b1143baed5a2fd99</MD5>
+			<ConfigFile>
+				<URL>http://localhost//config/MobAmputation.cfg</URL>
+				<Path>config/MobAmputation.cfg</Path>
+				<MD5>4c1096df08d24f408f591c537133a4a5</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="files^Torched2.0.0" id="files^Torched" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/files^Torched2.0.0.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>812e5368abc86aded2241a28414e3fc6</MD5>
+			<ConfigFile>
+				<URL>http://localhost//config/Torched.cfg</URL>
+				<Path>config/Torched.cfg</Path>
+				<MD5>86a8a3dfd1aa1277aead5d6c5c670c85</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Forge Multipart" id="ForgeMultipart" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/1.6.4/ForgeMultipart-universal-1.6.4-1.0.0.250.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9684b4c87830d14f1a1dd7e556852970</MD5>
+			<Meta>
+				<authors>ChickenBones</authors>
+				<description>Open source library for facilitation of multiple functional parts in the one block space.</description>
+				<credits></credits>
+				<url>https://github.com/Chicken-Bones/ForgeMultipart</url>
+				<version>1.0.0.250</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/multipart.cfg</URL>
+				<Path>config/multipart.cfg</Path>
+				<MD5>edeedf901350e84532d1ab967c7eb903</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="forgecfg" id="forgecfg" depends="" side="BOTH">
+			<ModType>Regular</ModType>
+			<URL>http://localhost//config/forge.cfg</URL>
+			<ModPath>config/forge.cfg</ModPath>
+			<MD5>8bee017a19e4885cdd6d88d95f1471e3</MD5>
+		</Module>
+		<Module name="modstats" id="modstats" depends="" side="BOTH">
+			<ModType>Regular</ModType>
+			<URL>http://localhost//config/modstats.cfg</URL>
+			<ModPath>config/modstats.cfg</ModPath>
+			<MD5>05cb8c240bc34ca7cb0514d98d36333d</MD5>
+		</Module>
+		<Module name="forgeChunkLoading" id="forgeChunkLoading" depends="" side="BOTH">
+			<ModType>Regular</ModType>
+			<URL>http://localhost//config/forgeChunkLoading.cfg</URL>
+			<ModPath>config/forgeChunkLoading.cfg</ModPath>
+			<MD5>de5894764a98450251336aae758fe8ba</MD5>
+		</Module>
+		<Module name="Fossil/Archeology: Reported" id="633" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/fossilsarch-reported-v1.0.6.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>71401560eba2ad9209c520d2264701ac</MD5>
+			<Meta>
+				<authors>Flammarilva, Team July, CannibalVox</authors>
+				<description>Rebuild &amp; hatch dinosaurs, plus a ton of other crazy things.  Based on Fossils &amp; Archaeology by Team July</description>
+				<credits>By Flammarilva &amp; Team July, re-ported by CannibalVox</credits>
+				<url>https://github.com/CannibalVox/FossilArcheology/</url>
+				<version>1.0</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/633.cfg</URL>
+				<Path>config/633.cfg</Path>
+				<MD5>64217f63add1e7ebc1fc0217e3de5a5e</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Galacticraft Core" id="GalacticraftCore" depends="MicdoodleCore" side="BOTH">
+			<URL priority="0">http://localhost//mods/Galacticraft-1.6.4-2.0.12.1010.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5d6f7c9c662207f8832faffdf00baebe</MD5>
+			<Meta>
+				<authors>micdoodle8</authors>
+				<description>An advanced space travel mod for Minecraft 1.6</description>
+				<credits></credits>
+				<url>http://www.micdoodle8.com/</url>
+				<version>2.0.12</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Galacticraft/core.conf</URL>
+				<Path>config/Galacticraft/core.conf</Path>
+				<MD5>febea7eb62703540326f3f03ee5625bd</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/Galacticraft/moon.conf</URL>
+				<Path>config/Galacticraft/moon.conf</Path>
+				<MD5>13b64c3f4ba37d3e2270b6ac4b380f4e</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/Galacticraft/power.conf</URL>
+				<Path>config/Galacticraft/power.conf</Path>
+				<MD5>17bcabc2891c8dea5888e751993b38ef</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Galacticraft Mars" id="GalacticraftMars" depends="MicdoodleCore" side="BOTH">
+			<URL priority="0">http://localhost//mods/Galacticraft-Planets-1.6.4-2.0.12.1010.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>07bcd703283b20ba7231c19f87810538</MD5>
+			<Meta>
+				<authors>micdoodle8</authors>
+				<description>Mars addon for Galacticraft.</description>
+				<credits></credits>
+				<url>http://www.micdoodle8.com/</url>
+				<version>2.0.12</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Galacticraft/mars.conf</URL>
+				<Path>config/Galacticraft/mars.conf</Path>
+				<MD5>6f4de57f867d0fb0d882b722de04ea2d</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="GregsLighting-1.9.1-mc1.6.4" id="GregsLighting-..-mc" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/GregsLighting-1.9.1-mc1.6.4.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>344f0d30e56e544ec793a905cb616558</MD5>
+			<ConfigFile>
+				<URL>http://localhost//config/GregsLighting.cfg</URL>
+				<Path>config/GregsLighting.cfg</Path>
+				<MD5>0d314fb5f8c8a72fa7ceca7b3b242f2d</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Highlands" id="Highlands" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Highlands2.1.7_MC1.6.4.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ee5e961144e56bf648323d5584144e16</MD5>
+			<Meta>
+				<authors>sdj64</authors>
+				<description>Highlands is a mod that adds more biomes to Minecraft.  Over 40 new biomes, new trees, mountains, and biome-specific ore gen.</description>
+				<credits>Sadris, Zombiepig333, VeryBigBro, Mpenver, Vexatos</credits>
+				<url>http://www.minecraftforum.net/topic/1602064-147146-forge-highlands-new-biomes-trees-and-more/</url>
+				<version>2.1.7</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Highlands.cfg</URL>
+				<Path>config/Highlands.cfg</Path>
+				<MD5>f810cad16c37b69d2c29a65162aed5a1</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="iChunUtil" id="iChunUtil" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/util^iChunUtil2.4.0.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6d6decd8d8c36c82743e552f4f1e1d37</MD5>
+			<Meta>
+				<authors>iChun</authors>
+				<description>Shared library mod required by several of iChun&apos;s Mods.</description>
+				<credits></credits>
+				<url>http://www.ichun.us/</url>
+				<version>2.2.0</version>
+			</Meta>
+		</Module>
+		<Module name="Immibis Core" id="ImmibisCore" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/immibis-core-57.2.0.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>29326efb35a7b637ae7646477534c6d8</MD5>
+			<Meta>
+				<authors>immibis</authors>
+				<description></description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/1001131-110-immibiss-mods-smp/</url>
+				<version>57.2.0</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/immibis.cfg</URL>
+				<Path>config/immibis.cfg</Path>
+				<MD5>4faf0b99b70e3a51591790a1e7a15a6c</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Immibis's Microblocks" id="ImmibisMicroblocks" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/immibis-microblocks-57.6.4.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bf8f0dc333665dbc4363f6b1582c1ded</MD5>
+			<Meta>
+				<authors>immibis</authors>
+				<description></description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/1001131-110-immibiss-mods-smp/</url>
+				<version>57.6.4</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/immibis-microblocks.cfg</URL>
+				<Path>config/immibis-microblocks.cfg</Path>
+				<MD5>e437558e5e69dbfc4d4ca1fa92668bc0</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/microblocks.cfg</URL>
+				<Path>config/microblocks.cfg</Path>
+				<MD5>74414edf82a6dcbea82c83167a454afb</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="IndustrialCraft 2" id="IC2" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/industrialcraft-2_2.0.397-experimental.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0f9acab40ebd5e2996b03216637b1054</MD5>
+			<Meta>
+				<authors>Alblaka, Player, RichardG, Thunderdark, GregoriusT, alexthesax, Drashian, Elementalist, Feanturi, Lurch1985, SirusKing, tahu44</authors>
+				<description>Industrial age themed expansion for Minecraft.</description>
+				<credits>Contributions by many people</credits>
+				<url>http://www.industrial-craft.net</url>
+				<version>2.0.397-experimental</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/IC2.cfg</URL>
+				<Path>config/IC2.cfg</Path>
+				<MD5>1e1411c8fb5429f3d0c5c8bc3b5b1515</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Inventory Tweaks" id="inventorytweaks" depends="" side="CLIENT">
+			<URL priority="0">http://localhost//mods/InventoryTweaks+mumble_native-MC1.6.2-1.56-b77.jar</URL>
+			<Required isDefault="true">false</Required>
+			<ModType>Regular</ModType>
+			<MD5>451c724eb1da60777279a524597422da</MD5>
+			<Meta>
+				<authors>Jimeo Wan, Kobata</authors>
+				<description>Tweaks to inventory handling for ease of use, including sorting and automatic replacement of broken tools or exhausted stacks of items.</description>
+				<credits>By Jimeo Wan, updated for Forge by Kobata</credits>
+				<url>https://github.com/Kobata/inventory-tweaks</url>
+				<version>1.56</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/InvTweaksTree.txt</URL>
+				<Path>config/InvTweaksTree.txt</Path>
+				<MD5>60b4a46e7801d5ddd4438eb10ec93b6f</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+
+		</Module>
+		<Module name="Iron Chest" id="IronChest" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ironchest-universal-1.6.4-5.4.1.702.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4c160ca83fb93dc62b51548b744532e3</MD5>
+			<Meta>
+				<authors>cpw</authors>
+				<description>New chests with larger sizes, with in-place upgrade items.
+The feature chest is the crystal chest, which is transparent - some inventory contents are visible without opening the chest</description>
+				<credits>By cpw, based on an original idea by Lishid</credits>
+				<url>http://www.minecraftforum.net/topic/981855-</url>
+				<version>5.4.1.702</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/IronChest.cfg</URL>
+				<Path>config/IronChest.cfg</Path>
+				<MD5>22a1ae514658da0e04b4a622b46c5bd7</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+-->
+		<Module name="MAtmos_r26__1_6_4" id="MAtmos" depends="liteloader" side="CLIENT">
+			<URL priority="0">http://ha3.eu/public/mc-mods/redirect-apply/matmos/new/MAtmos_r26__1_6_4.zip
+			</URL>
+			<Required isDefault="true">false</Required>
+			<ModType inRoot="false">Extract</ModType>
+			<MD5>b9da4411f4b059125410e9ce77759ff3</MD5>
+		</Module>
+<!--		<Module name="MicdoodleCore-1.6.4-2.0.12.1010" id="MicdoodleCore" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/MicdoodleCore-1.6.4-2.0.12.1010.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2d5d73465411dfbeb5cf7e2f756ca1fc</MD5>
+		</Module>
+		<Module name="MineFactory Reloaded" id="MineFactoryReloaded" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/MineFactoryReloaded-2.7.8-482.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f705f88a918e9c3b87397deab96e5d81</MD5>
+			<Meta>
+				<authors>PowerCrystals, TehKrush, AtomicStryker, Feanorith, skyboy026</authors>
+				<description>Automate everything!</description>
+				<credits>All the contributors</credits>
+				<url>http://minecraft.curseforge.com/mc-mods/minefactory-reloaded/</url>
+				<version>2.7.8</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/powercrystals/minefactoryreloaded/common.cfg</URL>
+				<Path>config/powercrystals/minefactoryreloaded/common.cfg</Path>
+				<MD5>97017096a9b29e54fb145f8a0117926a</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Morph" id="Morph" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Morph-Beta-0.7.1.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9271b81d01c7b80de3f1e89580902b1e</MD5>
+			<Meta>
+				<authors>iChun</authors>
+				<description>Morph mod, made for ModJam 2. Allows players to acquire the morph skill and turn into other mobs.</description>
+				<credits></credits>
+				<url>http://ichun.us/mods/morph/</url>
+				<version>0.7.1</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Morph.cfg</URL>
+				<Path>config/Morph.cfg</Path>
+				<MD5>5c54992eae90d1f265b29184a5aa40f3</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Multi Mine" id="AS_MultiMine" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/MultiMine_1.6.4.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>026dccc28d5d7982d003c1f3e3a3da41</MD5>
+			<Meta>
+				<authors>AtomicStryker</authors>
+				<description>Partially Mined Blocks stay broken and regenerate slowly! Mine parallel or in tandem! Fully networked!</description>
+				<credits>cpw for making FML</credits>
+				<url>http://www.minecraftforum.net/topic/485526-</url>
+				<version>1.3.4</version>
+			</Meta>
+		</Module>
+		<Module name="Natura" id="Natura" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Natura_mc1.6.X_2.1.14.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0b0712e9741829681964e5ab682c74f1</MD5>
+			<Meta>
+				<authors>mDiyo, Slime Knights</authors>
+				<description>Heyo, Redwood trees! Chop them all day long!</description>
+				<credits>Samtrion</credits>
+				<url>www.minecraftforum.net/topic/1753754-natura/</url>
+				<version>2.1.14</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Natura.txt</URL>
+				<Path>config/Natura.txt</Path>
+				<MD5>bf59b2008865e1324b7a1aa7751db55c</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="NEI Plugins" id="NEIPlugins" depends="NEI" side="BOTH">
+			<URL priority="0">http://localhost//mods/NEIPlugins-1.1.0.6.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f005f1044b4fd706fef4858caef7db03</MD5>
+			<Meta>
+				<authors>mistaqur</authors>
+				<description></description>
+				<credits>ChickenBones, bdew</credits>
+				<url>https://bitbucket.org/mistaqur/nei_plugins/wiki</url>
+				<version>1.1.0.6</version>
+			</Meta>
+		</Module>
+		<Module name="NotEnoughItems" id="NEI" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/NotEnoughItems%201.6.1.8.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5a1d03896cc9490705de7fdf983582ff</MD5>
+			<Meta>
+				<authors>ChickenBones</authors>
+				<description></description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/909223</url>
+				<version>1.6.1.8</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/NEI.cfg</URL>
+				<Path>config/NEI.cfg</Path>
+				<MD5>785a7f00c9a517c6cc6b205b258c514c</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Nuclear Control" id="IC2NuclearControl" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/IC2NuclearControl-1.6.2e-ic2-experimental.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e70955cad99fa6b4cd0f66de357bacb3</MD5>
+			<Meta>
+				<authors>Shedar</authors>
+				<description>Nuclear Control, an Industrial Craft 2 addon that allows you to build efficient monitoring and notification system for your nuclear reactor. Also you can use Howler Alarm and Industrial Alarm in any case when you want industrial-style notification/alarming system.</description>
+				<credits>Authored by Shedar, based on an original idea by Nargon and Noosius</credits>
+				<url>http://forum.industrial-craft.net/index.php?page=Thread&amp;threadID=5915</url>
+				<version>1.6.2e</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/IC2NuclearControl.cfg</URL>
+				<Path>config/IC2NuclearControl.cfg</Path>
+				<MD5>c221dd131d7f9321a37ac40f368655a0</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="OptiFine_1.6.4_HD_D1" id="OptiFine_.._HD_D" depends="" side="CLIENT">
+			<URL priority="0">http://localhost//mods/OptiFine_1.6.4_HD_D1.jar</URL>
+			<Required isDefault="true">false</Required>
+			<ModType>Regular</ModType>
+			<MD5>0c897eefe4f69918db443ce059553aa2</MD5>
+			<ConfigFile>
+				<URL priority="0">http://localhost//optionsof.txt</URL>
+				<Path>optionsof.txt</Path>
+				<MD5>f332ccbd493aa9fbd5b63f7c5d008795</MD5>
+				<NoOverwrite>true</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="options" id="options" depends="" side="BOTH">
+			<URL priority="0">http://localhost//options.txt</URL>
+			<ModPath>options.txt</ModPath>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6bbc38765538a66226c904c3b4e34b62</MD5>
+		</Module>
+		<Module name="Plant Mega Pack" id="plantmegapack" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/PlantMegaPack_2.20.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>aafa99dd9f19d597da6a9e2912076655</MD5>
+			<Meta>
+				<authors>10paktimbits</authors>
+				<description>This mod adds a huge variety of plants to your worlds. Included are new: berry bushes, cactus &amp; desert plants, ferns, flowers, grasses, mushrooms, forest plants, mountain plants, rainforest plants, wetlands plants, shrubs and more.</description>
+				<credits>10paktimbits</credits>
+				<url>http://www.minecraftforum.net/topic/2210656-</url>
+				<version>2.20</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/plantmegapack/main.cfg</URL>
+				<Path>config/plantmegapack/main.cfg</Path>
+				<MD5>a7a6ffc24ed99b6a7d338c83a2101668</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="PortalGun" id="PortalGun" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/PortalGun2.0.2.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>076162ae7debc0dae697534e439ff499</MD5>
+			<Meta>
+				<authors>iChun</authors>
+				<description>Add the portal gun and many other portal elements into Minecraft.</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/199391-/</url>
+				<version>2.0.1</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/PortalGun.cfg</URL>
+				<Path>config/PortalGun.cfg</Path>
+				<MD5>b48cc5bdd5938e0dd703661316e67b54</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="PowerCrystalsCore-1.1.8-9" id="PowerCrystalsCore" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/PowerCrystalsCore-1.1.8-9.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>11ce6aeaa3a73761580f9a541345ef4b</MD5>
+			<ConfigFile>
+				<URL>http://localhost//config/powercrystals/minefactoryreloaded/common.cfg</URL>
+				<Path>config/powercrystals/minefactoryreloaded/common.cfg</Path>
+				<MD5>672ee6cb1de27b399beeb9d974874f19</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/powercrystals/core/client.cfg</URL>
+				<Path>config/powercrystals/core/client.cfg</Path>
+				<MD5>9ff1dbf6eb6e1c16cd2377f2f65897bd</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/powercrystals/core/server.cfg</URL>
+				<Path>config/powercrystals/core/server.cfg</Path>
+				<MD5>f1aef636d9b3c3473a87ddf371f2378f</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="ProjectRed" id="ProjRed|Core" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ProjectRedWorld-1.6.4-4.3.5.30.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>973f02f4811b5f43ced1590e1838f0b2</MD5>
+			<Meta>
+				<authors>MrTJP, ChickenBones</authors>
+				<description>Redstone. The way it was meant to be. Built against Forge 9.11.1.965.</description>
+				<credits>Eloraam, GitHub contributers</credits>
+				<url>http://projectredwiki.com</url>
+				<version>4.3.5.30</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/ProjectRed.cfg</URL>
+				<Path>config/ProjectRed.cfg</Path>
+				<MD5>3542a6f4ace0841043eb8dbf56cf3b67</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="ProjectRed" id="ProjRed|Core" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ProjectRedIntegration-1.6.4-4.3.5.30.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9d5024c0b9979c47d516dd46300f230e</MD5>
+			<Meta>
+				<authors>MrTJP, ChickenBones</authors>
+				<description>Redstone. The way it was meant to be. Built against Forge 9.11.1.965.</description>
+				<credits>Eloraam, GitHub contributers</credits>
+				<url>http://projectredwiki.com</url>
+				<version>4.3.5.30</version>
+			</Meta>
+		</Module>
+		<Module name="ProjectRed" id="ProjRed|Core" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ProjectRedCompat-1.6.4-4.3.5.30.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4ef9ce69d0508d8d21e2e0c01242a11b</MD5>
+			<Meta>
+				<authors>MrTJP, ChickenBones</authors>
+				<description>Redstone. The way it was meant to be. Built against Forge 9.11.1.965.</description>
+				<credits>Eloraam, GitHub contributers</credits>
+				<url>http://projectredwiki.com</url>
+				<version>4.3.5.30</version>
+			</Meta>
+		</Module>
+		<Module name="ProjectRed" id="ProjRed|Core" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ProjectRedBase-1.6.4-4.3.5.30.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4060a98b28e0a2e496c42c340cfe0f92</MD5>
+			<Meta>
+				<authors>MrTJP, ChickenBones</authors>
+				<description>Redstone. The way it was meant to be. Built against Forge 9.11.1.965.</description>
+				<credits>Eloraam, GitHub contributers</credits>
+				<url>http://projectredwiki.com</url>
+				<version>4.3.5.30</version>
+			</Meta>
+		</Module>
+		<Module name="ProjectRed" id="ProjRed|Core" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ProjectRedMechanical-BETA-1.6.4-4.3.5.30.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f15fc44e0011acf8810b39a2b049df77</MD5>
+			<Meta>
+				<authors>MrTJP, ChickenBones</authors>
+				<description>Redstone. The way it was meant to be. Built against Forge 9.11.1.965.</description>
+				<credits>Eloraam, GitHub contributers</credits>
+				<url>http://projectredwiki.com</url>
+				<version>4.3.5.30</version>
+			</Meta>
+		</Module>
+		<Module name="Railcraft" id="Railcraft" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Railcraft_1.6.4-8.4.0.0.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>83c9166bedf370b7cb393eca8a8c9c7f</MD5>
+			<Meta>
+				<authors>CovertJaguar</authors>
+				<description>Redefine your rails</description>
+				<credits>Created by CovertJaguar</credits>
+				<url>http://railcraft.info/</url>
+				<version>8.4.0.0</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/railcraft/railcraft.cfg</URL>
+				<Path>config/railcraft/railcraft.cfg</Path>
+				<MD5>5c4a33c85d027389129744c6ff9e3249</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Ruins Spawning System" id="AS_Ruins" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Ruins_1.6.4.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8042eb30589fa061a9ed1a32979450b8</MD5>
+			<Meta>
+				<authors>AtomicStryker, d00dv4d3r, kolt666, 4HeadTiger, Blue001</authors>
+				<description>Allows highly customizable Structure Templates to randomly generate in your Worlds</description>
+				<credits>See thread</credits>
+				<url>http://www.minecraftforum.net/topic/1113099-</url>
+				<version>11.0</version>
+			</Meta>
+		</Module>
+		<Module name="servers" id="servers" depends="" side="BOTH">
+			<URL priority="0">http://localhost//servers.dat</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<ModPath>servers.dat</ModPath>
+			<MD5>f8a60c330d672fd47bb02603746dea03</MD5>
+		</Module>
+		<Module name="Thaumcraft" id="Thaumcraft" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Thaumcraft4.1.0g.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9760bb78fc71eb7f449bf3c8ad8cfb34</MD5>
+			<Meta>
+				<authors>Azanor</authors>
+				<description>Adding a touch of magic to Minecraft</description>
+				<credits>Special thanks to Dan Scott, Lorc, bonemouse, Scott Killen, Rorax and chicken_bones</credits>
+				<url>http://www.minecraftforum.net/topic/838839-100-thaumcraft/</url>
+				<version>4.1.0g</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Thaumcraft.cfg</URL>
+				<Path>config/Thaumcraft.cfg</Path>
+				<MD5>4bef15d208b227e7c16f2dd1b0f0610b</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Thaumcraft Mob Aspects" id="ThaumcraftMobAspects" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/thaumcraftmobaspects-1.6.X-1e-build2.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9185b8573fa45ccac27df33223872e35</MD5>
+			<Meta>
+				<authors>iguana_man, lycaon, XanderGryphon</authors>
+				<description>Adds Thaumcraft aspects to various mod&apos;s mobs</description>
+				<credits></credits>
+				<url></url>
+				<version>1.6.X-1e</version>
+			</Meta>
+		</Module>
+		<Module name="The SecretRoomsMod" id="secretroomsmod" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/SecretRoomsMod-universal-1.6.4-4.6.2.324.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>624cecd961d8ca0fa73922a5cfc864c5</MD5>
+			<Meta>
+				<authors>AbrarSyed, alexbegt</authors>
+				<description>This mod adds a variety of cool blocks that camouflage themselves to the surrounding world. All of these blocks have extremely useful functions that allow you to simply hide your diamonds, or punish all who dare try to get to them. Hidden doors, pressure plates, hidden levers and more!</description>
+				<credits>Authored by AbrarSyed, based on an original idea by iampeppino. Help provided by alexbegt.</credits>
+				<url>http://www.minecraftforum.net/topic/546192-</url>
+				<version>1.6.4-4.6.2.324</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/secretroomsmod.cfg</URL>
+				<Path>config/secretroomsmod.cfg</Path>
+				<MD5>e386978738e12c46b3a640f4d4ed3b37</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="The Twilight Forest" id="TwilightForest" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/twilightforest-1.6.4-1.20.5.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ca465ee6717e9a28844b4e5bb6ce8abd</MD5>
+			<Meta>
+				<authors>Benimatic (Ben Mazur)</authors>
+				<description>An enchanted forest dimension.</description>
+				<credits>By Benimatic</credits>
+				<url>http://http://www.minecraftforum.net/topic/561673-</url>
+				<version>1.20.5</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/TwilightForest.cfg</URL>
+				<Path>config/TwilightForest.cfg</Path>
+				<MD5>258c12052ba41a43d4373ef3115ee921</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Thermal Expansion" id="ThermalExpansion" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/ThermalExpansion-3.0.0.5.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>27725d201ab39d497052c2f16aadbb5c</MD5>
+			<Meta>
+				<authors>Team CoFH</authors>
+				<description>Expanding Minecraft thermally - provides new options for automation and processing!</description>
+				<credits>Team CoFH</credits>
+				<url>http://www.teamcofh.com</url>
+				<version>3.0.0.5</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/cofh/ThermalExpansion-Fuels.cfg</URL>
+				<Path>config/cofh/ThermalExpansion-Fuels.cfg</Path>
+				<MD5>7b68602ade357747167b6c8dd87973a7</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/cofh/ThermalExpansion-Florbs.cfg</URL>
+				<Path>config/cofh/ThermalExpansion-Florbs.cfg</Path>
+				<MD5>d10a14d5357878496c0da2840cc47167</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/cofh/ThermalExpansion.cfg</URL>
+				<Path>config/cofh/ThermalExpansion.cfg</Path>
+				<MD5>7cc96aedb4c49884877e02a347235ee3</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Tinkers' Construct" id="TConstruct" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/TConstruct_mc1.6.4_1.5.5.4.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>10cf9c09f3f01b7ac453b43be20319ca</MD5>
+			<Meta>
+				<authors>mDiyo, fuj1n, ProgWML6, Sunstrike, Pillbox</authors>
+				<description>A little of this, a little of that, a lot of tinkering, and a lot of tools</description>
+				<credits>Slime Knights, Samtrion, Abculatter_2</credits>
+				<url>http://www.minecraftforum.net/topic/1659892-tinkers-construct</url>
+				<version>@VERSION@</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/TinkersWorkshop.txt</URL>
+				<Path>config/TinkersWorkshop.txt</Path>
+				<MD5>7201d872b363b58a0fcdcc852bbebd8b</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Tinkers' Mechworks" id="TMechworks" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/TMechworks_mc1.6.4_0.1.6.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>52b8cf82577bb9e391eb8bc1da7dd2d0</MD5>
+			<Meta>
+				<authors>mDiyo, Pillbox</authors>
+				<description></description>
+				<credits>Slime Knights</credits>
+				<url></url>
+				<version>0.1.6</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/TMechworks.cfg</URL>
+				<Path>config/TMechworks.cfg</Path>
+				<MD5>2c087d15fa642cb9b194271a5a72f0cc</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Torojima's ChocoCraft" id="chococraft" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Chococraft_3.0.3.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6b2c71d4e72a60b5356cc8b5c814cfa2</MD5>
+			<Meta>
+				<authors>Torojima &lt;al-s@gmx.de&gt;, Micdoodle</authors>
+				<description>Adds a mountable, breedable mob and supporting items.</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/1119809-</url>
+				<version>3.0.3</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/chocobo_config.txt</URL>
+				<Path>config/chocobo_config.txt</Path>
+				<MD5>98a454f8e754afdd2df580e256ebf0a8</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+			<ConfigFile>
+				<URL>http://localhost//config/chococraft.cfg</URL>
+				<Path>config/chococraft.cfg</Path>
+				<MD5>0bfaec29f1b73d813e16402261ed91cf</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Treecapitator" id="TreeCapitator" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/[1.6.4]TreeCapitator.Forge.1.6.4.r09.Universal.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4da0ac8dc7c89b2a4357aa129799fdb2</MD5>
+			<Meta>
+				<authors>DaftPVF, bspkrs, Lunatrius</authors>
+				<description>Allows you to chop down entire trees by breaking a single log.</description>
+				<credits>Original by DaftPVF, currently maintained by bspkrs; additional credit to Lunatrius, AtomicStryker, ScottKillen, MisterFiber</credits>
+				<url>http://www.minecraftforum.net/topic/1009577-/</url>
+				<version>Forge 1.6.4.r09</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/TreeCapitator.cfg</URL>
+				<Path>config/TreeCapitator.cfg</Path>
+				<MD5>ecacfc2112be66a3babacbb857bd8e10</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Universal-Electricity-3.1.0.87-core" id="Universal-Electricity-...-core" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Universal-Electricity-3.1.0.87-core.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7fcad27d03eb3a941baa820f9aaf404a</MD5>
+			<ConfigFile>
+				<URL>http://localhost//config/UniversalElectricity.cfg</URL>
+				<Path>config/UniversalElectricity.cfg</Path>
+				<MD5>3444497d4e9a51a9c058393b2bd9c275</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Waila" id="Waila" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/Waila_1.5.1a.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>42790277280a0ef1ac66f2be1af82f43</MD5>
+			<Meta>
+				<authors>ProfMobius</authors>
+				<description></description>
+				<credits></credits>
+				<url></url>
+				<version>1.5.1a</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/Waila.cfg</URL>
+				<Path>config/Waila.cfg</Path>
+				<MD5>d9b8039a261e1d5f0b87033352d54dcd</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="WR-CBE Core" id="WirelessRedstone" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/WR-CBE%201.4.0.6.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fcba120a8d1086365b3009fe937326c2</MD5>
+			<Meta>
+				<authors>ChickenBones</authors>
+				<description>Redstone Ether with some component items</description>
+				<credits></credits>
+				<url>http://www.minecraftforum.net/topic/909223</url>
+				<version>1.4.0.6</version>
+			</Meta>
+			<ConfigFile>
+				<URL>http://localhost//config/WirelessRedstone.cfg</URL>
+				<Path>config/WirelessRedstone.cfg</Path>
+				<MD5>3f76d848e6d0a858300e28dbeab19e7f</MD5>
+				<NoOverwrite>false</NoOverwrite>
+			</ConfigFile>
+		</Module>
+		<Module name="Yet Another Food Mod" id="YAFM" depends="" side="BOTH">
+			<URL priority="0">http://localhost//mods/yafm-1.0.0.jar</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f684631e651600b4ff4faa9ea70259e5</MD5>
+			<Meta>
+				<authors>airbreather, skidznet</authors>
+				<description>Adds some more food to the game.  Yeah yeah, it&apos;s been done before, just not by me.  Icons by skidznet.</description>
+				<credits></credits>
+				<url>https://github.com/airbreather/YAFM</url>
+				<version>1.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="ZansMinimap" id="ZansMinimap" depends="" side="CLIENT">
+			<URL priority="0">http://localhost//mods/ZansMinimap1.6.4.zip</URL>
+			<Required isDefault="true">true</Required>
+			<ModType>Regular</ModType>
+			<MD5>dd79c6047439b9d051b7b7f5b8b08175</MD5>
+		</Module>
+-->
+	</Server>
+</ServerPack>
