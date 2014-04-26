@@ -13,15 +13,14 @@ client:
 	cp -r ../shared-pkgs/* . && \
 	cp -r ../client-pkgs/* . && \
 	cp -r ../client-only/* . && \
-# add liteloader tweak and library entry to modpack.jar version.json
 	zip -uj bin/modpack.jar version.json && \
-	rm version.json && \
+	rm version.json MD5SUM && \
 	cd mods && \
 	rm -rf disabled && \
 	unzip bundledpackages/Ruins_1.6.4.zip && \
-	unzip bundledpackages/MultiMine_1.6.4.zip && \
 	unzip bundledpackages/MAtmos_r26__1_6_4.zip && \
 	rm -rf bundledpackages 
+# add liteloader tweak and library entry to modpack.jar version.json
 
 server:
 	mkdir $(TEMPSERV) && \
@@ -33,7 +32,6 @@ server:
 	rm -rf mods/disabled && \
 	cd mods && \
 	unzip bundledpackages/Ruins_1.6.4.zip && \
-	unzip bundledpackages/MultiMine_1.6.4.zip && \
 	rm -rf bundledpackages && \
 	cd ../plugins && \
 	unzip bundledpackages/Flags.zip FlagsCore.jar Flags.jar
