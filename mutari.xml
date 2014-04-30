@@ -341,8 +341,9 @@ Additional credit to Risugami and LexManos.</credits>
 				<version>3.0.0</version>
 			</Meta>
 		</Module>
+-->
 		<Module name="DrZhark's Mo'Creatures Mod" id="MoCreatures" depends="" side="BOTH">
-			<URL priority="0">http://localhost//mods/DrZharks%20MoCreatures%20Mod%20v6.1.0.zip</URL>
+			<URL priority="0"> http://srv8870.uppcdn.com/dl/kzocrtngygui563m6yg4tjnjwcuptzapxokjbwxozauxlb3rdaefpeef/DrZharks%20MoCreatures%20Mod%20v6.1.0.zip</URL>
 			<Required isDefault="true">true</Required>
 			<ModType>Regular</ModType>
 			<MD5>745b9cb0ad9d5633bd5e0fb39c750e85</MD5>
@@ -353,7 +354,7 @@ Additional credit to Risugami and LexManos.</credits>
 				<url>http://www.minecraftforum.net/viewtopic.php?f=25&amp;t=86929</url>
 				<version>6.1.0</version>
 			</Meta>
-			<ConfigFile>
+<!--			<ConfigFile>
 				<URL>http://localhost//config/MoCreatures/MoCreatures.cfg</URL>
 				<Path>config/MoCreatures/MoCreatures.cfg</Path>
 				<MD5>acf553212b45894756e5436e32a4d3fc</MD5>
@@ -365,7 +366,9 @@ Additional credit to Risugami and LexManos.</credits>
 				<MD5>c19fcff8bf500b902d63e451f6bf3f66</MD5>
 				<NoOverwrite>false</NoOverwrite>
 			</ConfigFile>
+-->
 		</Module>
+<!--
 		<Module name="Electric Magic Tools" id="ElectricMagicTools" depends="" side="BOTH">
 			<URL priority="0">http://localhost//mods/ElectroMagicTools-1.0.9d.jar</URL>
 			<Required isDefault="true">true</Required>
