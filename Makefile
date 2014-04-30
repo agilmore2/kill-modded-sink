@@ -34,7 +34,8 @@ server:
 	unzip bundledpackages/Ruins_1.6.4.zip && \
 	rm -rf bundledpackages && \
 	cd ../plugins && \
-	unzip bundledpackages/Flags.zip FlagsCore.jar Flags.jar
+	unzip bundledpackages/Flags.zip FlagsCore.jar Flags.jar && \
+	unzip bundledpackages/Essentials.zip Essentials.jar EssentialsSpawn.jar
 
 client-zip: client
 	cd $(TEMPCLNT) && \
